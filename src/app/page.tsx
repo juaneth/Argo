@@ -8,6 +8,8 @@ import {
   CardTitle,
 } from "~/components/ui/card";
 
+import { FaEye } from "react-icons/fa";
+
 import { Badge } from "~/components/ui/badge";
 
 import { db } from "~/server/db";
@@ -17,7 +19,7 @@ export default async function Home() {
 
   return (
     <div className="background">
-      <div className="flex w-full flex-wrap justify-center p-5">
+      <div className="flex w-full flex-wrap justify-center gap-5 p-5">
         {projects.map((project) => {
           return (
             <Card
@@ -25,15 +27,26 @@ export default async function Home() {
               role="button"
               className="relative w-96 transition-all hover:bg-white/5"
             >
-              <Badge className="absolute right-5 top-5 bg-green-300 hover:bg-green-300">
-                {project.watchers} Watchers
-              </Badge>
               <CardHeader>
-                <CardTitle>{project.displayName}</CardTitle>
-                <CardDescription>{project.name}</CardDescription>
+                <div className="flex flex-row justify-between">
+                  <div className="truncate">
+                    <CardTitle className="overflow-hidden text-ellipsis">
+                      {project.displayName}
+                    </CardTitle>
+                    <CardDescription>{project.name}</CardDescription>
+                  </div>
+                  <div>
+                    <Badge className=" flex flex-row gap-2 bg-green-300 hover:bg-green-300">
+                      <FaEye className="text-lg"></FaEye>
+                      {project.watchers}
+                    </Badge>
+                  </div>
+                </div>
               </CardHeader>
               <CardContent>
-                <p>{project.desc}</p>{" "}
+                <p className="line-clamp-2 max-w-lg break-words">
+                  {project.desc}
+                </p>{" "}
               </CardContent>
             </Card>
           );

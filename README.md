@@ -7,7 +7,7 @@
 - [X] Shadcn UI with mock data
 - [X] Vercel Hosting
 - [ ] Scaffold database
-- [ ] Clerk auth setup
+- [X] Clerk auth setup
 - [ ] Finish DB Postgres Vercel
 - [ ] User Managment with Clerk
 - [ ] Creating and managing projects
