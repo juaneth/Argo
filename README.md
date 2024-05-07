@@ -4,10 +4,13 @@
 
 ### TODO
 
-- [ ] Shadcn UI with mock data
-- [ ] Vercel Hosting
-- [ ] Clerk auth
-- [ ] DB Postgres Vercel
+- [X] Shadcn UI with mock data
+- [X] Vercel Hosting
+- [ ] Scaffold database
+- [ ] Clerk auth setup
+- [ ] Finish DB Postgres Vercel
+- [ ] User Managment with Clerk
+- [ ] Creating and managing projects
 - [ ] Analytics
 - [ ] Error reporting
 - [ ] Polls
