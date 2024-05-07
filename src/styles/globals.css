@@ -1,6 +1,23 @@
 @tailwind base;
   @tailwind components;
   @tailwind utilities;
+  @layer utilities {
+    .bordered-b {
+        @apply border-b border-white/20;
+    }
+    .bordered-r {
+        @apply border-r border-white/20;
+    }
+    .bordered-l {
+        @apply border-l border-white/20;
+    }
+    .bordered-all {
+        @apply border border-white/20;
+    }
+    .shadow-panel {
+        @apply shadow shadow-black/20 shadow-lg;
+    }
+}
 
   @layer base {
     :root {
