@@ -91,3 +91,7 @@
       @apply bg-background text-foreground;
     }
   }
+
+  .background {
+    background: radial-gradient(60% 50% at 0% -30%, rgba(45, 212, 191, 0.15) 0px, rgba(8, 0, 0, 0)), radial-gradient(60% 50% at 50% -30%, rgba(255, 96, 62, 0.15) 0px, rgba(8, 0, 0, 0)), radial-gradient(60% 50% at 100% -30%, rgba(113, 46, 224, 0.15) 0px, rgba(8, 0, 0, 0));
+  }

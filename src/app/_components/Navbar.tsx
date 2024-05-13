@@ -1,5 +1,7 @@
 import Image from "next/image";
 
+import Link from "next/link";
+
 import { Button } from "~/components/ui/button";
 
 import { SignInButton, SignedOut, SignedIn, UserButton } from "@clerk/nextjs";
@@ -7,23 +9,32 @@ import { SignInButton, SignedOut, SignedIn, UserButton } from "@clerk/nextjs";
 export default function Navbar() {
   return (
     <>
-      <nav className="bordered-b flex w-full flex-row items-center justify-between bg-neutral-900 p-5 shadow-xl shadow-black/30">
+      <nav className="bordered-b flex w-full flex-row items-center justify-between bg-neutral-950 p-5 shadow-xl shadow-black/30">
         <div className="flex w-min flex-row">
-          <Image
-            priority
-            src={"/icon-word.svg"}
-            width={24}
-            height={32}
-            alt="Chita Logo"
-            className="mr-5 max-h-8 w-min"
-          />
+          <Link href={"/"} className="mr-5 flex flex-col justify-center">
+            <Image
+              priority
+              src={"/Argo-Wordmark.svg"}
+              width={80}
+              height={32}
+              alt="Chita Logo"
+              className="min-h-8 min-w-20"
+            />
+          </Link>
 
-          <Button variant={"link"} className="text-lg" role="button">
-            Discover
-          </Button>
-          <Button variant={"link"} className="text-lg" role="button">
-            Your Watchlist
-          </Button>
+          <Link href={"/discover"}>
+            <Button variant={"link"} className="text-lg" role="button">
+              Discover
+            </Button>
+          </Link>
+
+          <SignedIn>
+            <Link href={"/user/watchlist"}>
+              <Button variant={"link"} className="text-lg" role="button">
+                Your Watchlist
+              </Button>
+            </Link>
+          </SignedIn>
         </div>
 
         <div className="flex w-min flex-row gap-4">

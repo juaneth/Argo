@@ -9,7 +9,7 @@ import { dark } from "@clerk/themes";
 const dmsans = DM_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Chita",
+  title: "Argo",
   description: "Platform to let communities choose how they want things done",
 };
 
