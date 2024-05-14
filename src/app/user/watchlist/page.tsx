@@ -18,7 +18,7 @@ export default async function Home() {
   const projects = await getProjects();
 
   return (
-    <div className="background">
+    <div className="background h-full">
       <div className="flex w-full flex-wrap justify-center gap-5 p-5">
         <div className="flex w-full flex-col items-start gap-2 p-5">
           <h1 className="text-4xl font-bold">Your watchlist</h1>

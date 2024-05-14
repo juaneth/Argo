@@ -11,12 +11,15 @@ export default function Navbar() {
     <>
       <nav className="bordered-b flex w-full flex-row items-center justify-between bg-neutral-950 p-5 shadow-xl shadow-black/30">
         <div className="flex w-min flex-row">
-          <Link href={"/"} className="mr-5 flex flex-col justify-center">
+          <Link
+            href={"/"}
+            className="mr-5 flex flex-col items-center justify-center"
+          >
             <Image
               priority
               src={"/Argo-Wordmark.svg"}
-              width={80}
               height={32}
+              width={80}
               alt="Chita Logo"
               className="min-h-8 min-w-20"
             />
