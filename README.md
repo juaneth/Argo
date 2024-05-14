@@ -1,4 +1,4 @@
-# Chita
+# Argo
 
 ## Platform to let communities decide how they want things done - Early development
 
