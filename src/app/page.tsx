@@ -9,7 +9,6 @@ import {
 } from "~/components/ui/card";
 
 import { FaEye } from "react-icons/fa";
-
 import { Badge } from "~/components/ui/badge";
 
 import { getProjects } from "~/server/db/db";
