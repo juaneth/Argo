@@ -38,7 +38,5 @@ export async function getProject(name: string) {
     return "1T+";
   }
 
-  projects!.watchers = fnum(Number(projects?.watchers));
-
   return projects;
 }
