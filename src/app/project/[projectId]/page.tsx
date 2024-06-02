@@ -22,30 +22,6 @@ export default function Page({ params }: { params: { project: string } }) {
           </h1>
         </div>
       </div>
-
-      <div className="bordered-l bordered-b flex w-[56rem] flex-col items-center gap-5 p-12">
-        <h1 className="w-full text-start text-2xl font-semibold tracking-tight">
-          Images
-        </h1>
-        <div className="w-full px-8">
-          <Carousel
-            opts={{
-              align: "start",
-            }}
-            className=" flex w-full max-w-full"
-          >
-            <CarouselContent>
-              <CarouselItem>
-                <h1>Hi</h1>
-              </CarouselItem>
-              <CarouselItem></CarouselItem>
-              <CarouselItem></CarouselItem>
-            </CarouselContent>
-            <CarouselPrevious />
-            <CarouselNext />
-          </Carousel>
-        </div>
-      </div>
     </div>
   );
 }

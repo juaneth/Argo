@@ -35,7 +35,7 @@ export const projects = createTable(
     bannerUrl: varchar("bannerUrl", { length: 1024 }),
     tags: json("tags").default([]).notNull(),
     owner: varchar("owner", { length: 256 }).notNull(),
-    watchers: integer("watchers").default(0).notNull(),
+    watchers: varchar("watchers", { length: 256 }).default("0").notNull(),
   },
   (example) => ({
     nameIndex: index("name_idx").on(example.name),
