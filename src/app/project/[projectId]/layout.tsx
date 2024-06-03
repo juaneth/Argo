@@ -23,6 +23,7 @@ import {
 } from "~/components/ui/menubar";
 
 import Link from "next/link";
+import { notFound } from "next/navigation";
 
 export default async function ProjectLayout({
   children,
@@ -43,9 +44,13 @@ export default async function ProjectLayout({
 
   const details = await getProject(params.projectId);
 
+  if (details == undefined) {
+    return notFound();
+  }
+
   return (
     <div className="flex h-full flex-col">
-      {details!.bannerUrl ? (
+      {details.bannerUrl ? (
         <>
           <div className="bordered-b relative min-h-80">
             <div className="absolute top-0 flex h-full flex-col items-start gap-2 p-2">

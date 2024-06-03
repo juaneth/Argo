@@ -41,3 +41,21 @@ export const projects = createTable(
     nameIndex: index("name_idx").on(example.name),
   }),
 );
+
+export const users = createTable(
+  "users",
+  {
+    id: serial("id").primaryKey(),
+    username: varchar("name", { length: 64 }).notNull(),
+    displayName: varchar("displayName", { length: 32 }).notNull(),
+    desc: varchar("desc", { length: 256 }),
+    createdAt: timestamp("created_at")
+      .default(sql`CURRENT_TIMESTAMP`)
+      .notNull(),
+    updatedAt: timestamp("updatedAt"),
+    iconUrl: varchar("iconUrl", { length: 1024 }),
+  },
+  (example) => ({
+    nameIndex: index("name_idx").on(example.username),
+  }),
+);
