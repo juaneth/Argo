@@ -56,6 +56,6 @@ export const users = createTable(
     iconUrl: varchar("iconUrl", { length: 1024 }),
   },
   (example) => ({
-    nameIndex: index("name_idx").on(example.username),
+    usernameIndex: index("username_idx").on(example.username),
   }),
 );
