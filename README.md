@@ -6,10 +6,10 @@
 
 - [X] Shadcn UI with mock data
 - [X] Vercel Hosting
-- [ ] Scaffold database
+- [X] Scaffold database
 - [X] Clerk auth setup
-- [ ] Finish DB Postgres Vercel
-- [ ] User Managment with Clerk
+- [X] Finish DB Postgres Vercel
+- [X] User Managment with Clerk
 - [ ] Creating and managing projects
 - [ ] Analytics
 - [ ] Error reporting

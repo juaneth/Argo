@@ -1,12 +1,21 @@
+"use client";
+
 import Image from "next/image";
 
 import Link from "next/link";
 
 import { Button } from "~/components/ui/button";
 
+import { usePathname } from "next/navigation";
+
 import { SignInButton, SignedOut, SignedIn, UserButton } from "@clerk/nextjs";
 
 export default function Navbar() {
+  const pathname = usePathname();
+
+  if (pathname == "/onboarding") {
+    return <></>;
+  }
   return (
     <>
       <nav className="bordered-b flex w-full flex-row items-center justify-between bg-neutral-950 p-5 shadow-xl shadow-black/30">

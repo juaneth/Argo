@@ -20,11 +20,13 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
   return (
     <ClerkProvider
       appearance={{
         baseTheme: dark,
       }}
+      signUpForceRedirectUrl={"/onboarding"}
     >
       <html lang="en">
         <body className={`${dmsans.className} dark`}>
